@@ -5,24 +5,13 @@ import { signin } from '../redux/authredux/action'
 import { getquestion, postquestion } from '../redux/forumredux/action'
 import Forumcard from '../components/Forumcard'
 
-
-const init={
-  username:"",
-  title:"",
-  description:"",
-  language:"",
-  date:"",
-  upvotes:0,
-  answers:0,
-
-}
-
+ 
 
 
 const Forum1 = () => {
 
 const [question,setquestion]=useState(false)
-const [data3,setdata3]=useState([])
+const [arr3,setArr3]=useState([])
 
 const [page,setpage]=useState(1)
     const dispatch=useDispatch()
@@ -33,9 +22,9 @@ const [page,setpage]=useState(1)
     
     useEffect(()=>{
     dispatch(signin)
-    dispatch(getquestion(page))
+    dispatch(getquestion)
    
-    },[page])
+    },[])
 
 
 
@@ -46,13 +35,12 @@ const [page,setpage]=useState(1)
       }
 
       let display=""
-      if(question===true){
+      if(question==true){
         display="block"
       } else{
         display="none"
       }   
-console.log(question)
-      
+ 
       const handlesubmit=(e)=>{
       e.preventDefault()
      dispatch(postquestion(data)).then(()=>{
@@ -64,12 +52,12 @@ console.log(question)
     
     }
     const handlefilter=(e)=>{
-     let newdata= data2?.filter((item)=>item.language===e.target.value)
-     setdata3(newdata)
+     let newdata= data2.filter((item)=>item.language==e.target.value)
+     setArr3(newdata)
     }
     let val=[]
-if(data3.length>0){
-  val=data3
+if(arr3.length>0){
+  val=arr3
 }else{
   val=data2
 }
@@ -79,8 +67,8 @@ if(data3.length>0){
     <Box width="50%" m="auto">
 
 
-<Select placeholder='Filter by language' onChange={handlefilter}>
-  <option value="Javascript">Javascript</option>
+<Select placeholder='Search by language' onChange={handlefilter}>
+  <option value="Javascript">JavaScript</option>
   <option value="Java">Java</option>
   <option value="Python">Python</option>
   <option value="other">other</option>
@@ -116,9 +104,9 @@ if(data3.length>0){
 ))}
 </Box>
 <Box mt="5%">
-<Button bg={"red"}  onClick={()=>setpage(page-1)}>Prev</Button>
+<Button bg={"teal"}  onClick={()=>setpage(page-1)}>Prev</Button>
 <Text as={"span"} >{page}</Text>
-<Button bg="yellow" onClick={()=>setpage(page+1)}>Next</Button></Box>
+<Button bg="blue" onClick={()=>setpage(page+1)}>Next</Button></Box>
     </Box>
   )
 }

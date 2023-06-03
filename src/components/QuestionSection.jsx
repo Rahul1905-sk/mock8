@@ -27,12 +27,12 @@ const QuestionSection = () => {
         <Box w={"80px"}>
           <img
             style={{ width: "100%" }}
-            src="https://img.freepik.com/free-psd/3d-illustration-person-with-pink-hair_23-2149436186.jpg?size=626&ext=jpg&ga=GA1.1.1395151129.1685774887&semt=ais"
+            src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png"
             alt="ss"
           />
         </Box>
         <Text fontSize={"12px"} fontWeight={500} lineHeight={"1"}>
-          JohnDeo123
+          karan
         </Text>
       </Stack>
       <Stack id="leftSide" textAlign={"left"}>

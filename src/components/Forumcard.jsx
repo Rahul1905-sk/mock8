@@ -5,7 +5,7 @@ const Forumcard = ({username,avatar,title,description,date,upvotes,language,answ
 
     
   return (
-    <Box mt="2%" boxShadow= "rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px" >
+    <Box mt="2%"  border={'1px solid black'} p={'5px 10px'} >
       <Flex gap={"5%"}>
       <Box>
 <Image width="100px" src={avatar}/>
@@ -14,7 +14,7 @@ const Forumcard = ({username,avatar,title,description,date,upvotes,language,answ
 
 <Box>
     <Text fontWeight={"600"}>{title}</Text>
-    <Flex justifyContent={'space-around'}>
+    <Flex justifyContent={'space-evenly'}>
         <Text fontWeight={"500"}>{language}</Text>
         <Text>{date}</Text>
         <Text>{answers}</Text>
