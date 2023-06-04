@@ -44,7 +44,7 @@ navigate("./login")
  
         <Input name="email" type="email" placeholder='Enter Your Email' value={data.email} onChange={handleChange}/>
         <Input name="password" type="password" placeholder='Enter Your Password' value={data.password} onChange={handleChange}/>
-        <Button type="submit" bg="black" color="white">SignUp</Button>
+        <Button type="submit"  bgColor={"#3175ffed"} color="white">SignUp</Button>
       </form>
     </Box>
   )

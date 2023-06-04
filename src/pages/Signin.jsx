@@ -43,9 +43,9 @@ if(email === '' && password === '') {
   return (
     <Box w="50%" margin={"auto"}>
       <form  mt="10%" onSubmit={handlesubmit}>               
-        <Input name="email" type="email" placeholder='Enter Your Email' onChange={(e)=>setemail(e.target.value)} />
-        <Input name="password" type="password" placeholder='Enter Your Password'  onChange={(e)=>setpassword(e.target.value)}/>
-        <Button type="submit" bg="black" color="white">SignUp</Button>
+        <br /><Input name="email" type="email" placeholder='Enter Your Email' onChange={(e)=>setemail(e.target.value)} />
+        <br /><Input name="password" type="password" placeholder='Enter Your Password'  onChange={(e)=>setpassword(e.target.value)}/>
+        <br /><Button type="submit"   bgColor={"#3175ffed"} color="white">SignIn</Button>
       </form>
     </Box>
   )

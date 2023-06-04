@@ -72,9 +72,8 @@ if(arr3.length>0){
   <option value="Java">Java</option>
   <option value="Python">Python</option>
   <option value="other">other</option>
-</Select>
-
-    <Button colorScheme='green' onClick={()=>setquestion(!question)} >Ask a Question</Button>
+</Select> 
+    <Button colorScheme='#3175ffed' onClick={()=>setquestion(!question)} >Ask a Question</Button>
     
      <form  mt="10%" style={{display:display}} onSubmit={handlesubmit}>
         <Input name="username" placeholder='Enter Your UserName' onChange={handleChange} value={state[0]?.username}/>
